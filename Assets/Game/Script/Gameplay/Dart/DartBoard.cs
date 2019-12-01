@@ -24,8 +24,10 @@ namespace Game.Gameplay.Dart
 
         private void OnTriggerEnter(Collider other)
         {
-            throw new NotImplementedException();
+            other.GetComponent<Rigidbody>().isKinematic = true;
         }
+        
+        
     }
 
 }
