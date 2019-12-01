@@ -25,6 +25,7 @@ namespace Game.Gameplay.Dart
         private void OnTriggerEnter(Collider other)
         {
             other.GetComponent<Rigidbody>().isKinematic = true;
+            Debug.Log("arrow tacked");
         }
         
         
