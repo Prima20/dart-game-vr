@@ -4,20 +4,29 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
-public class DartBoard : MonoBehaviour
+namespace Game.Gameplay.Dart
 {
-    [SerializeField] private float dartRadius;
-    
-    // Start is called before the first frame update
-    void Start()
+    public class DartBoard : MonoBehaviour
     {
+        [SerializeField] private float dartRadius = 1.6f;
+    
+        // Start is called before the first frame update
+        void Start()
+        {
         
+        }
+
+        // Update is called once per frame
+        void Update()
+        {
+        
+        }
+
+        private void OnTriggerEnter(Collider other)
+        {
+            throw new NotImplementedException();
+        }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-    
 }
+

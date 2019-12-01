@@ -59,8 +59,8 @@
      <Compile Include="Assets\Game\Script\Gameplay\Box.cs" />
      <Compile Include="Assets\Game\Script\Gameplay\Dart\DartArrow.cs" />
      <Compile Include="Assets\Game\Script\Gameplay\Dart\DartBoard.cs" />
-     <Compile Include="Assets\Game\Script\Gameplay\Grab.cs" />
      <Compile Include="Assets\Game\Script\Gameplay\Movement.cs" />
+     <Compile Include="Assets\Game\Script\Gameplay\Player\Grab.cs" />
      <Compile Include="Assets\GoogleVR\Beta\Demos\Scripts\DemoObjectController6DoF.cs" />
      <Compile Include="Assets\GoogleVR\Beta\Demos\Scripts\DemoSeeThroughController.cs" />
      <Compile Include="Assets\GoogleVR\Beta\Scripts\GvrBetaControllerInput.cs" />

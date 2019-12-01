@@ -15,8 +15,10 @@
                 <e p="DartArrow.cs" t="Include" />
                 <e p="DartBoard.cs" t="Include" />
               </e>
-              <e p="Grab.cs" t="Include" />
               <e p="Movement.cs" t="Include" />
+              <e p="Player" t="Include">
+                <e p="Grab.cs" t="Include" />
+              </e>
             </e>
           </e>
         </e>

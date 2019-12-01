@@ -1034,7 +1034,7 @@ GameObject:
   m_Layer: 0
   m_Name: MyHand
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -1046,7 +1046,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2111753495}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 1, y: 0, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 963194228}
@@ -1134,7 +1134,7 @@ MonoBehaviour:
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: 
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -1181,7 +1181,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ff9c722289ee124e9eac0effe72f48c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ball: {fileID: 845488830992988203}
+  arrow: {fileID: 0}
   myHand: {fileID: 2111753495}
   onHand: 0
 --- !u!23 &1766379258753150635
@@ -1236,6 +1236,7 @@ GameObject:
   - component: {fileID: 1766379258753150635}
   - component: {fileID: 2164968858576434312}
   - component: {fileID: 2164968858576434313}
+  - component: {fileID: 2164968858576434314}
   m_Layer: 0
   m_Name: DartBoard
   m_TagString: Untagged
@@ -1278,6 +1279,19 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -9026121237912441803, guid: eeaeafc0afe141b43b106bddde90e84e, type: 3}
+--- !u!114 &2164968858576434314
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2164968858576434311}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19ac70c06b114dd47a7cf2155d9f2e86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dartRadius: 1.6
 --- !u!33 &3197531090299043538
 MeshFilter:
   m_ObjectHideFlags: 0
