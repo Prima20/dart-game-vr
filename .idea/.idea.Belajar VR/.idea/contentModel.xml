@@ -10,7 +10,6 @@
         <e p="Game" t="Include">
           <e p="Script" t="Include">
             <e p="Gameplay" t="Include">
-              <e p="Box.cs" t="Include" />
               <e p="Dart" t="Include">
                 <e p="DartArrow.cs" t="Include" />
                 <e p="DartBoard.cs" t="Include" />
@@ -18,6 +17,9 @@
               <e p="Movement.cs" t="Include" />
               <e p="Player" t="Include">
                 <e p="Grab.cs" t="Include" />
+              </e>
+              <e p="UI" t="Include">
+                <e p="ScoreUIController.cs" t="Include" />
               </e>
             </e>
           </e>

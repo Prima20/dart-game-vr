@@ -8,44 +8,42 @@ namespace Game.Gameplay.Player
     public class Grab : MonoBehaviour
     {
         // Start is called before the first frame update
-        private GameObject arrow;
         public GameObject myHand;
         public bool onHand = false;
-
+        public bool isBeingTargeted = false;
+        
         private Rigidbody rbd;
+        private bool readyToThrow;
+
         void Start()
         {
             rbd = GetComponent<Rigidbody>();
-            arrow = this.gameObject;
         }
-
-        // Update is called once per frame
-        private void Update()
+        
+        void Update()
         {
-            GrabItem();
-        }
-
-        public void GrabItem()
-        {
-            if (Input.GetButtonDown("Fire1") && onHand == false)
-            {
-                arrow.transform.rotation = Quaternion.Euler(-90, 0, 47);
-                arrow.transform.SetParent(myHand.transform);
-                arrow.transform.localPosition = new Vector3(0, myHand.transform.localPosition.y, 0);
-                onHand = true;
-            }
-            else if (Input.GetButtonDown("Fire1") && onHand)
+            if (readyToThrow && Input.GetButtonDown("Fire1"))
             {
                 Throw();
             }
         }
 
+        public void OnPointerClick()
+        {
+            gameObject.transform.SetParent(myHand.transform, false);
+            gameObject.transform.rotation = Quaternion.Euler(-90, 0, 0);
+            gameObject.transform.localPosition = new Vector3(0, myHand.transform.localPosition.y, 0);
+            readyToThrow = true;
+        }
+
         void Throw()
         {
-            arrow.transform.SetParent(null);
+            readyToThrow = false;
+            gameObject.transform.SetParent(null);
             rbd.isKinematic = false;
-            rbd.AddForce(Vector3.forward* 500);
+            rbd.AddForce(Camera.main.transform.forward * 800);
         }
+        
     }
 
 }

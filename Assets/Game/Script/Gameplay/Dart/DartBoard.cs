@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using Game.Gameplay.UI;
 using UnityEditor;
 using UnityEngine;
 
@@ -8,24 +9,17 @@ namespace Game.Gameplay.Dart
 {
     public class DartBoard : MonoBehaviour
     {
-        [SerializeField] private float dartRadius = 1.6f;
-    
-        // Start is called before the first frame update
-        void Start()
-        {
-        
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-        
-        }
+        [SerializeField] private ScoreUIController scoreUi;
 
         private void OnTriggerEnter(Collider other)
         {
             other.GetComponent<Rigidbody>().isKinematic = true;
-            Debug.Log("arrow tacked");
+            scoreUi.SetScore(CountScore(transform.position, other.transform.position));
+        }
+
+        double CountScore(Vector3 ownPos, Vector3 otherPos)
+        {
+            return Vector3.Distance(ownPos, otherPos);
         }
         
         

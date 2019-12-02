@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class DartArrow : MonoBehaviour
 {
+    //<summary>
+    //The actual script for dart arrow, but use the Grab.cs for now 
+    //</summary>
     // Start is called before the first frame update
     void Start()
     {
