@@ -30,8 +30,8 @@ namespace Game.Gameplay.Player
 
         public void OnPointerClick()
         {
-            gameObject.transform.SetParent(myHand.transform, false);
             gameObject.transform.rotation = Quaternion.Euler(-90, 0, 0);
+            gameObject.transform.SetParent(myHand.transform, false);
             gameObject.transform.localPosition = new Vector3(0, myHand.transform.localPosition.y, 0);
             readyToThrow = true;
         }
@@ -44,6 +44,13 @@ namespace Game.Gameplay.Player
             rbd.AddForce(Camera.main.transform.forward * 800);
         }
         
+        private void OnCollisionEnter(Collision other)
+        {
+            if (other.gameObject.CompareTag("Ground"))
+            {
+                rbd.isKinematic = true;
+            }
+        }
     }
 
 }
